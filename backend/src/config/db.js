@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 /**
  * Connect to MongoDB. Retries a few times so the app tolerates
  * a database that is still starting up (common in local dev / docker).
